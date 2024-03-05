@@ -1,0 +1,32 @@
+.sidebar {
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(to bottom right, #4CAF50, #FFEB3B);
+  color: #000000;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  font-weight: bold;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+.sidebar ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  color: #000000;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #f59348;
+}
