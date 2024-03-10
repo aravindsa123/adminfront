@@ -31,7 +31,6 @@ const Departmentdetails = () => {
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
-                        <TableCell>Doctor id</TableCell>
                         <TableCell>Doctor name</TableCell>
                         <TableCell>Specialization</TableCell>
                         <TableCell>Status</TableCell>
@@ -44,9 +43,8 @@ const Departmentdetails = () => {
                         return (
                             <TableRow
                                 key={pos}>
-                                <TableCell>{row.id}</TableCell>
                                 <TableCell>{row.pname}</TableCell>
-                                <TableCell>{row.sp}</TableCell>
+                                <TableCell>{row.specialization}</TableCell>
                                 <TableCell>{row.status}</TableCell>
                                 <TableCell><EditIcon onClick={()=>updateValues(row)}/></TableCell>
                                

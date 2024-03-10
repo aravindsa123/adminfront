@@ -16,6 +16,7 @@ const Sidebar = () => {
        <ul>
        <a href="/sview"><li>Added Department</li></a>
        <a href="/viewdetails"><li>Doctor Details</li></a>
+       <a href="/booking"><li>Bookings</li></a>
       
       </ul>
       

@@ -58,10 +58,23 @@ const Doctoredit = (props) => {
     <TextField  label="Email" type='text' name="email" variant="filled" value={inputs.email} onChange={inputHandler}/><br /><br />
     <TextField  label="Phone" type='text' name="phone" variant="filled" value={inputs.phone} onChange={inputHandler}/>&nbsp;&nbsp;
     <TextField  label="Hospital" type='text' name="hospital" variant="filled" value={inputs.hospital} onChange={inputHandler}/><br /><br />
-    <TextField  label="Specialization" type='text' name="specialization" variant="filled" value={inputs.specialization} onChange={inputHandler}/>&nbsp;&nbsp;
+    
+    <label>Department </label>
+      <Select name="specialization" value={inputs.specialization} onChange={inputHandler}>
+        <MenuItem value="Ayurveda">Ayurveda</MenuItem>
+            <MenuItem value="Cardiology">Cardiology</MenuItem>
+            <MenuItem value="Dentist">Dentistry</MenuItem>
+            <MenuItem value="Dermatologist">Dermatology</MenuItem>
+            <MenuItem value="Physiotherapist">Physiotherapy</MenuItem>
+            <MenuItem value="Psychologist">Psychology</MenuItem>
+            <MenuItem value="Pulmonology">Pulmonology</MenuItem>
+            <MenuItem value="Surgeon">Surgeon</MenuItem>  
+      </Select>&nbsp;
+
     <TextField  label="Experience" type='text' name="experience" variant="filled" value={inputs.experience} onChange={inputHandler}/><br /><br />
     <TextField  label="Qualification" type='text' name="qualification" variant="filled" value={inputs.qualification} onChange={inputHandler}/>&nbsp;&nbsp;
     <TextField  label="Location" type='text' name="location" variant="filled" value={inputs.location} onChange={inputHandler}/><br /><br />
+    
     <label>Gender </label>
     <Select
    labelId="demo-simple-select-label"

@@ -8,6 +8,7 @@ import React from 'react';
 import Footer from './components/footer/Footer';
 import Doctordetails from './components/Doctors/Doctordetails';
 import Doctor from './components/Doctors/Doctor';
+import Bookings from './components/Booking/Bookings';
 
 
 
@@ -22,6 +23,7 @@ import Doctor from './components/Doctors/Doctor';
         <Route path={'/sview'}element={<Departmentdetails method='get'/>}></Route> 
        <Route path='/s'element={<Department method='post'/>}/>
        <Route path='/c'element={<Doctor method='post'/>}/>
+       <Route path={'/booking'}element={<Bookings method='get'/>}></Route>
       </Routes>
      </BrowserRouter>
      <Footer/>

@@ -14,8 +14,10 @@ const Doctor = () => {
     "experience":'',
     "qualification":'',
     "location":'',
-    "gender":''
+    "gender":'',
+    "timeSlot":''
   })
+
   var[selectedimage,setSelectedimage]=useState(null);
   
 
@@ -36,6 +38,7 @@ const Doctor = () => {
     formdata.append('qualification',inputs.qualification);
     formdata.append('location',inputs.location);
     formdata.append('gender',inputs.gender);
+    formdata.append('timeSlot',inputs.timeSlot);
     formdata.append('image1',selectedimage);
     fetch('http://localhost:3002/new',
     {
@@ -67,17 +70,42 @@ const Doctor = () => {
       <TextField label="Email" type="text" name="email" value={inputs.email} onChange={(event) => inpuHandler (event)}/><br/><br/>
       <TextField label="Phone" type="text" name="phone" value={inputs.phone} onChange={(event) => inpuHandler (event)}/> &nbsp;
       <TextField label="Hospital" type="text" name="hospital" value={inputs.hospital} onChange={(event) => inpuHandler (event)}/> <br /><br />
-      <TextField label="Specialization" type="text" name="specialization" value={inputs.specialization} onChange={(event) => inpuHandler (event)}/> &nbsp;
+
+      <label>Department </label>
+      <Select name="specialization" value={inputs.specialization} onChange={inpuHandler}>
+        <MenuItem value="Ayurveda">Ayurveda</MenuItem>
+            <MenuItem value="Cardiology">Cardiology</MenuItem>
+            <MenuItem value="Dentist">Dentistry</MenuItem>
+            <MenuItem value="Dermatologist">Dermatology</MenuItem>
+            <MenuItem value="Physiotherapist">Physiotherapy</MenuItem>
+            <MenuItem value="Psychologist">Psychology</MenuItem>
+            <MenuItem value="Pulmonology">Pulmonology</MenuItem>
+            <MenuItem value="Surgeon">Surgeon</MenuItem>  
+      </Select>&nbsp;
+
       <TextField label="Experience" type="text" name="experience" value={inputs.experience} onChange={(event) => inpuHandler (event)}/>  <br /><br />
       <TextField label="Qualification" type="text" name="qualification" value={inputs.qualification} onChange={(event) => inpuHandler (event)}/>  &nbsp;
       <TextField label="Location" type="text" name="location" value={inputs.location} onChange={(event) => inpuHandler (event)}/> <br /><br />
 
       <label>Gender </label>
-      <Select name="gender" value={inputs.gender}onChange={inpuHandler}>
+      <Select name="gender" value={inputs.gender} onChange={inpuHandler}>
         <MenuItem value="Male" selected>Male</MenuItem>
             <MenuItem value="Female">Female</MenuItem>
             <MenuItem value="Others">Others</MenuItem>
       </Select><br /><br />
+
+      <label>Select Time Slot: </label>
+        <select name="timeSlot" value={inputs.timeSlot} onChange={inpuHandler} >
+          <option value="">-- Select a time slot --</option>
+          <option value="5:00 PM - 9:30 PM">5:00 PM - 9:30 PM</option>
+          <option value="5:00 PM - 9:30 PM">6:00 PM - 8:00 PM</option>
+          <option value="5:00 PM - 9:30 PM">5:00 PM - 7:30 PM</option>
+          <option value="5:00 PM - 9:30 PM">6:00 PM - 9:00 PM</option>
+          <option value="5:00 PM - 9:30 PM">6:00 PM - 9:30 PM</option>
+          <option value="5:00 PM - 9:30 PM">5:30 PM - 8:30 PM</option>
+          <option value="5:00 PM - 9:30 PM">5:30 PM - 8:00 PM</option>
+        </select>&nbsp;
+      
       <label>Upload photo </label>
         <input type="file" onChange={handleimage}></input>
         <br /><br />

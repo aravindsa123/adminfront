@@ -45,7 +45,7 @@ const Departmentedit = (props) => {
       <Topbar/>
       <Sidebar/>
       <h2>Edit Department</h2>
-    <TextField  label="Doctor id" name="id" variant="filled" value={inputs.id} onChange={inputHandler}/><br /><br />
+   
   
   {/* <FormControl sx={{ m: 1, minWidth: 120 }}> */}
   <TextField label="Doctor name" name="pname" variant="filled" value={inputs.pname} onChange={inputHandler}>
@@ -58,7 +58,18 @@ const Departmentedit = (props) => {
       })
     }
     </TextField> <br /><br />
-    <TextField  label="Specialization" name="sp" variant="filled" value={inputs.sp} onChange={inputHandler}/><br /><br />
+    <label>Department </label>
+      <Select name="specialization" value={inputs.specialization}onChange={inputHandler}>
+        <MenuItem value="Ayurveda">Ayurveda</MenuItem>
+            <MenuItem value="Cardiology">Cardiology</MenuItem>
+            <MenuItem value="Dentist">Dentistry</MenuItem>
+            <MenuItem value="Dermatologist">Dermatology</MenuItem>
+            <MenuItem value="Physiotherapist">Physiotherapy</MenuItem>
+            <MenuItem value="Psychologist">Psychology</MenuItem>
+            <MenuItem value="Pulmonology">Pulmonology</MenuItem>
+            <MenuItem value="Surgeon">Surgeon</MenuItem>  
+      </Select><br /><br />
+      
     <Select
    labelId="demo-simple-select-label"
     name='status'value={inputs.status} onChange={inputHandler}>

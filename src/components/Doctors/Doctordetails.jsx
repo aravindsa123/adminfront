@@ -14,7 +14,7 @@ const Doctordetails = () => {
   var [update, setUpdate] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/view")
+    axios.get("http://localhost:3002/display")
       .then(response => {
         setCategory(response.data)
       })
@@ -40,6 +40,7 @@ const Doctordetails = () => {
                         <TableCell>Experience</TableCell>
                         <TableCell>Qualification</TableCell>
                         <TableCell>Location</TableCell>
+                        <TableCell>TimeSlot</TableCell>
                         <TableCell>Gender</TableCell>
             </TableRow>
           </TableHead>
@@ -58,6 +59,7 @@ const Doctordetails = () => {
                                 <TableCell>{row.experience}</TableCell>
                                 <TableCell>{row.qualification}</TableCell>
                                 <TableCell>{row.location}</TableCell>
+                                <TableCell>{row.timeSlot}</TableCell>
                                 <TableCell>{row.gender}</TableCell>
                   <TableCell><EditIcon onClick={() => updateValues(row)} /></TableCell>
                    {/* <TableCell>
